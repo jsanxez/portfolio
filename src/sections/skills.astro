@@ -1,0 +1,23 @@
+---
+const skills = {
+    'Programming Languages': ['JavaScript', 'PHP', 'Java', 'C/C++', 'Python', 'C#'],
+    'Frontend': ['HTML', 'CSS', 'React', 'Next.js', 'Astro'],
+    'Backend': ['Node.js', 'Express', 'MongoDB', 'MySQL', 'Oracle'],
+    'Others and Tools': [ 'Git', 'Linux', 'Docker', 'Figma', 'Android','Firebase', 'CodeIgniter', 'Wordpress'],
+}
+---
+
+<section class="max-w-5xl mx-auto">
+    <h2 class="text-center text-3xl mb-4">Skills</h2>
+    <p class="mb-16 text-center">
+        Lately focusing on React, Next.js, and Three.js
+    </p>
+    <div class="flex flex-col gap-6 w-fit mx-auto">
+        {Object.keys(skills).map(category => (
+            <p class="w-fit">
+                <span class="font-bold inline-block w-52">{category}: </span>
+                {skills[category].map(skill => ( <span>{skill} </span>))}
+            </p>
+        ))}
+    </div>
+</section>
