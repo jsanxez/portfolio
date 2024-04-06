@@ -2,7 +2,7 @@
 const { text, link, orientation } = Astro.props;
 ---
 
-<a href="{link}" class=`indicator ${orientation} absolute border-b border-black py-2`>{text}</a>
+<a href=`${link}` class=`indicator ${orientation} absolute border-b border-black py-2`>{text}</a>
 
 <style>
     a.to-left { padding-right: 20px; }
@@ -47,12 +47,12 @@ const { text, link, orientation } = Astro.props;
         left: -4%;
     }
     a.indicator:nth-of-type(2) {
-        top: 64%;
-        left: -12%;
+        top: 56%;
+        left: -4%;
     }
     a.indicator:nth-of-type(3) {
-        bottom: 50%;
-        right: -16%;
+        bottom: 82%;
+        right: -4%;
     }
 
 </style>
