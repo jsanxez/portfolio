@@ -1,9 +1,15 @@
 ---
 import Button from '../components/Button.astro';
+import Indicator from '../components/Indicator.astro';
 ---
 
 <div class="p-8 mb-8">
-    <img src="/tent.svg" class="w-80 mx-auto" />
+    <div class="relative w-fit mx-auto">
+        <img src="/tent.svg" class="w-80" />
+        <Indicator text="Projects" link="#projects" orientation="to-left" />
+        <Indicator text="Skills" link="#projects" orientation="to-left" />
+        <Indicator text="Blog" link="#projects" orientation="to-right" />
+    </div>
     <div class="text-center">
         <h2 class="text-2xl mt-4 mb-3">José Sánchez</h2>
         <h1 class="text-4xl mb-4">Software Developer</h1>

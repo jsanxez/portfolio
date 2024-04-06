@@ -1,0 +1,58 @@
+---
+const { text, link, orientation } = Astro.props;
+---
+
+<a href="{link}" class=`indicator ${orientation} absolute border-b border-black py-2`>{text}</a>
+
+<style>
+    a.to-left { padding-right: 20px; }
+    a.to-right { padding-left: 20px; }
+
+    a::before, a::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        border-radius: 100px;
+    }
+    a::before {
+        width: 24px;
+        height: 24px;
+        border: 2px solid black;
+    }
+    a::after {
+        width: 4px;
+        height: 4px;
+        background-color: black;
+    }
+
+    a.to-left::before {
+        bottom: -12px;
+        right: -12px;
+    }
+    a.to-right::before {
+        bottom: -12px;
+        left: -12px;
+    }
+    a.to-left::after {
+        bottom: -2px;
+        right: -2px;
+    }
+    a.to-right::after {
+        bottom: -2px;
+        left: -2px;
+    }
+
+    a.indicator:nth-of-type(1) {
+        top: 16%;
+        left: -4%;
+    }
+    a.indicator:nth-of-type(2) {
+        top: 64%;
+        left: -12%;
+    }
+    a.indicator:nth-of-type(3) {
+        bottom: 50%;
+        right: -16%;
+    }
+
+</style>
