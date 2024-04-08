@@ -1,5 +1,20 @@
 ---
-const { text } = Astro.props;
+const { type, iconPosition } = Astro.props;
 ---
 
-<button class="border border-black rounded-full py-2 px-6 text-sm">{text}</button>
+<button class=`${type} ${iconPosition} inline-flex items-center gap-2 rounded-full px-6 text-sm h-10`>
+    <slot />
+</button>
+
+<style>
+    .leading { padding-left: 1rem; }
+    .trailing { padding-right: 1rem; }
+    .filled {
+        background-color: #9231D3;
+        color: white;
+        fill: white;
+    }
+    .outlined {
+        border: 1px solid #9231D3;
+    }
+</style>

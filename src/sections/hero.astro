@@ -1,11 +1,12 @@
 ---
 import Button from '../components/Button.astro';
 import Indicator from '../components/Indicator.astro';
+import Forest from '../components/icons/forest.astro';
 ---
 
 <div class="mb-8 p-8 h[820px]">
     <div class="relative w-fit mx-auto">
-        <img src="/tent.svg" class="w-80" />
+        <Forest />
         <Indicator text="Projects" link="#projects" orientation="to-left" />
         <Indicator text="Skills" link="#skills" orientation="to-left" />
         <Indicator text="Blog" link="#blog" orientation="to-right" />
@@ -18,6 +19,8 @@ import Indicator from '../components/Indicator.astro';
             basado en el buen diseño y orientado hacia las buena práctica y
             experiencia de usuario
         </p>
-        <Button text="Let's Talk"/>
+        <Button type="filled">
+            Let's Talk
+        </Button>
     </div>
 </div>
