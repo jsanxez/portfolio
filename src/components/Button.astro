@@ -10,11 +10,33 @@ const { type, iconPosition } = Astro.props;
     .leading { padding-left: 1rem; }
     .trailing { padding-right: 1rem; }
     .filled {
-        background-color: #9231D3;
+        /* background-color: #9231d3; */
+        background-color: rgb(128, 0, 128);
         color: white;
         fill: white;
+        transition: background-color 250ms, box-shadow 250ms ease-out;
     }
     .outlined {
         border: 1px solid #9231D3;
+        transition: background-color 250ms ease-out;
+    }
+
+    .filled:hover {
+        box-shadow: 0 1px 3px 1px rgba(0, 0, 0, .15), 0 1px 2px 0px rgba(0, 0, 0, .3);
+        /* background-color: #9c34e1; */
+        background-color: rgb(140, 25, 140);
+    }
+    .filled:active {
+        box-shadow: none;
+        /* background-color: #a736f3; */
+        background-color: rgb(153, 50, 153);
+    }
+    .outlined:hover {
+        /* background-color: rgba(146, 49,211, .08); */
+        background-color: rgba(128, 0, 128, .08);
+    }
+    .outlined:active {
+        /* background-color: rgba(146, 49,211, .12); */
+        background-color: rgba(128, 0, 128, .12);
     }
 </style>
