@@ -2,7 +2,7 @@
 const { text, link, orientation } = Astro.props;
 ---
 
-<a href=`${link}` class=`indicator ${orientation} absolute border-b border-black py-2`>{text}</a>
+<a href=`${link}` class=`indicator ${orientation} absolute`>{text}</a>
 
 <style>
     a.to-left { padding-right: 20px; }
@@ -17,12 +17,19 @@ const { text, link, orientation } = Astro.props;
     a::before {
         width: 24px;
         height: 24px;
-        border: 2px solid black;
+        border: 2px solid #9231D3;
     }
     a::after {
         width: 4px;
         height: 4px;
-        background-color: black;
+        transform-origin: 100%;
+        background-color: #9231D3;
+        transition: width 250ms, transform 500ms ease-out;
+    }
+
+    a:hover::after {
+        width: 102%;
+        transform: scaleY(.25);
     }
 
     a.to-left::before {
