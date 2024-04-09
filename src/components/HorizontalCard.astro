@@ -1,17 +1,15 @@
 ---
 import Button from './Button.astro';
+const { title, description, image } = Astro.props;
 ---
 
 <div class="flex flex-wrap gap-6">
-    <img class="image border border-black rounded-2xl w-80 aspect-video object-cover grow" src="https://i.pinimg.com/564x/d4/cf/07/d4cf0792884ea0a59876177ca8e64e46.jpg"/>
+    <div>
+        <img class="image rounded-2xl w-80 aspect-video object-cover border border-purple-700" src={image.path} alt={image.alt} />
+    </div>
     <div class="w-96 grow">
-        <h3 class="text-2xl mb-4">Project Name</h3>
-        <p class="pb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque sed elit elit. Nunc tincidunt at purus nec rutrum. Duis
-            bibendum nisi risus, a volutpat arcu pellentesque id. Mauris odio
-            ante.
-        </p>
+        <h3 class="text-2xl mb-4">{title}</h3>
+        <slot />
         <div>
             <Button type="outlined" iconPosition="leading">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg>
