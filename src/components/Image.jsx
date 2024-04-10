@@ -62,7 +62,7 @@ function Lightbox ({ imageSet, onClose }) {
     <>
       <div onClick={() => { onClose() }} className='fixed inset-0 flex gap-4 items-center justify-center bg-black/60 backdrop-blur-xl'>
         <Arrow direction='previous' changeImage={handlePrevious} />
-        <div className='w-[1000px] overflow-hidden'>
+        <div className='w-[1000px]'>
           <p className='text-center text-white mb-4'>{`${index + 1} / ${imageSet.length}`}</p>
           {images.map(img => (
             <Slide key={img.path} path={img.path} altText={img.alt} isVisible={img.isVisible} />
@@ -79,8 +79,8 @@ function Slide ({ path, altText, isVisible }) {
     e.stopPropagation()
   }
   return (
-    <div key={path} onClick={handleClick} className={!isVisible && 'hidden'}>
-      <img src={path} className='w-full aspect-video object-contain' />
+    <div key={path} className={`${!isVisible && 'hidden'} aspect-video`}>
+      <img src={path} onClick={handleClick} className='h-full mx-auto' />
       <p className='text-white text-center mt-4'>{altText}</p>
     </div>
   )
