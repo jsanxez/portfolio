@@ -60,7 +60,7 @@ function Lightbox ({ imageSet, onClose }) {
 
   return (
     <>
-      <div onClick={() => { onClose() }} className='fixed inset-0 flex gap-4 items-center justify-center bg-black/80'>
+      <div onClick={() => { onClose() }} className='fixed inset-0 flex gap-4 items-center justify-center bg-black/60 backdrop-blur-xl'>
         <Arrow direction='previous' changeImage={handlePrevious} />
         <div className='w-[1000px] overflow-hidden'>
           <p className='text-center text-white mb-4'>{`${index + 1} / ${imageSet.length}`}</p>
@@ -75,8 +75,11 @@ function Lightbox ({ imageSet, onClose }) {
 }
 
 function Slide ({ path, altText, isVisible }) {
+  const handleClick = (e) => {
+    e.stopPropagation()
+  }
   return (
-    <div key={path} className={!isVisible && 'hidden'}>
+    <div key={path} onClick={handleClick} className={!isVisible && 'hidden'}>
       <img src={path} className='w-full aspect-video object-contain' />
       <p className='text-white text-center mt-4'>{altText}</p>
     </div>
