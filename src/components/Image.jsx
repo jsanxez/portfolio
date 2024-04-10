@@ -26,22 +26,43 @@ function Lightbox ({ imageSet, onClose }) {
   const [images, setImages] = useState(modImages)
   const [index, setIndex] = useState(0)
 
+  const updateIndex = (n, length) => { // n: [-1 | 1]
+    let i = index
+    i = i + n
+
+    if (i < length && i >= 0) {
+      setIndex(i)
+      return i
+    } else {
+      const j = (!(i < length)) ? 0 : imageSet.length - 1
+      setIndex(j)
+      return j
+    }
+  }
+
+  const makeSlideVisible = (i) => {
+    const updatedImages = imageSet.map(img => ({ ...img }))
+    updatedImages[i].isVisible = true
+    setImages(updatedImages)
+  }
+
+  const handlePrevious = (e) => {
+    e.stopPropagation()
+    const i = updateIndex(-1, imageSet.length)
+    makeSlideVisible(i)
+  }
+
   const handleNext = (e) => {
     e.stopPropagation()
-    if (index < imageSet.length - 1) {
-      const i = index + 1
-      const updatedImages = imageSet.map(img => ({ ...img }))
-      updatedImages[i].isVisible = true
-      setIndex(i)
-      setImages(updatedImages)
-    }
+    const i = updateIndex(1, imageSet.length)
+    makeSlideVisible(i)
   }
 
   return (
     <>
       <div onClick={() => { onClose() }} className='fixed inset-0 flex gap-4 items-center justify-center bg-black/80'>
-        <Arrow direction='previous' />
-        <div className='w-[1000px] border-4 border-yellow-300 overflow-hidden'>
+        <Arrow direction='previous' changeImage={handlePrevious} />
+        <div className='w-[1000px] overflow-hidden'>
           <p className='text-center text-white mb-4'>{`${index + 1} / ${imageSet.length}`}</p>
           {images.map(img => (
             <Slide key={img.path} path={img.path} altText={img.alt} isVisible={img.isVisible} />
