@@ -1,12 +1,11 @@
 ---
+import Image from './Image';
 import Button from './Button.astro';
 const { title, description, image } = Astro.props;
 ---
 
 <div class="flex flex-wrap gap-6">
-    <div>
-        <img class="image rounded-2xl w-80 aspect-video object-cover border border-purple-700" src={image.path} alt={image.alt} />
-    </div>
+    <Image client:load imageSet={image} />
     <div class="w-96 grow">
         <h3 class="text-2xl mb-4">{title}</h3>
         <slot />
