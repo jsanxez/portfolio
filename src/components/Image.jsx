@@ -9,7 +9,7 @@ export default function Image ({ imageSet }) {
   return (
     <>
       <div>
-        <img src={imageSet[0].path} alt={imageSet[0].alt} onClick={handleClick} className='image w-80 rounded-2xl aspect-video object-cover border border-purple-700' />
+        <img src={imageSet[0].path} alt={imageSet[0].alt} onClick={handleClick} className='md:w-80 rounded-2xl aspect-video object-cover border border-purple-700' />
         {imageSet.length > 1 && <div class='w-1 h-1 rounded-full bg-purple-700 mx-auto mt-2' />}
         {showModal && <Lightbox imageSet={imageSet} onClose={handleSlider} />}
       </div>
