@@ -60,14 +60,18 @@ function Lightbox ({ imageSet, onClose }) {
     <>
       <div onClick={() => { onClose() }} className='fixed inset-0 flex justify-center items-center bg-black/60 backdrop-blur-xl'>
         <div className='flex items-center  justify-center gap-4 mx-4 w-[1000px] h-[90vh]'>
-          <Arrow direction='previous' changeImage={handlePrevious} />
+          <button onClick={handlePrevious} className='absolute sm:static left-[6%] shrink-0 inline-flex justify-center items-center rounded-full bg-white w-10 h-10'>
+            <svg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'><path d='M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z' /></svg>
+          </button>
           <div className='self-stretch grow flex flex-col justify-center gap-4'>
             <p className='text-center text-white'>{`${index + 1} / ${imageSet.length}`}</p>
             {images.map(img => (
               <Slide key={img.path} path={img.path} altText={img.alt} isVisible={img.isVisible} />
             ))}
           </div>
-          <Arrow direction='next' changeImage={handleNext} />
+          <button onClick={handleNext} className='absolute sm:static right-[6%] shrink-0 inline-flex justify-center items-center rounded-full bg-white w-10 h-10'>
+            <svg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'><path d='M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z' /></svg>
+          </button>
         </div>
       </div>
     </>
@@ -85,15 +89,5 @@ function Slide ({ path, altText, isVisible }) {
       </div>
       <p className='text-white text-center mt-4'>{altText}</p>
     </div>
-  )
-}
-
-function Arrow ({ direction, changeImage }) {
-  return (
-    <button onClick={changeImage} className='shrink-0 inline-flex justify-center items-center rounded-full bg-white w-10 h-10'>
-      {direction === 'next'
-        ? <svg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'><path d='M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z' /></svg>
-        : <svg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'><path d='M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z' /></svg>}
-    </button>
   )
 }
