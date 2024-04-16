@@ -1,15 +1,13 @@
 ---
-import HorizontalCard from "../components/HorizontalCard.astro";
-const projects = await Astro.glob('../pages/projects/*.md');
+import ProjectItem from "../components/ProjectItem.astro";
+const projects = await Astro.glob("../pages/projects/*.md");
 ---
 
 <section id="projects" class="max-w-5xl mx-auto py-8 px-4">
     <h2 class="text-center text-3xl mb-16">Projects</h2>
     <div class="flex flex-col gap-8">
         {projects.map(project => (
-            <HorizontalCard title={project.frontmatter.title} image={project.frontmatter.image} >
-            <p class="pb-6">{project.frontmatter.description}</p>
-            </HorizontalCard>
+            <ProjectItem project={project.frontmatter} />
         ))}
     </div>
 </section>
