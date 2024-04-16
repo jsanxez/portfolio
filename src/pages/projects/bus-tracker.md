@@ -11,5 +11,5 @@ image:
     alt: "Login with credentials to get in the app"
 
 links:
-  code: "https://github.com/jsanxez/fragmental2.0"
+  code: "https://github.com/jsanxez/bus_tracker_project"
 ---
