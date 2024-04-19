@@ -15,15 +15,15 @@ const projectsCollection = defineCollection({
     schema: z.object({
       title: z.string(),
       description: z.string(),
-      status: z.string(),
+      status: z.string().optional(),
       image: z.array(z.object({
         path: z.string(),
         alt: z.string()
       })),
       links: z.object({
-        code: z.string(),
-        site: z.string()
-      })
+        code: z.string().optional(),
+        site: z.string().optional(),
+      }).optional()
     })
 })
 

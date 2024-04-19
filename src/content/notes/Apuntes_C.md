@@ -2,7 +2,7 @@
 title: "PHP Language Reference"
 author: "PHP Docs"
 color: ["#7B86B8", "#7B86B8"]
-text_color: "#EAEAEA"
+textColor: "#EAEAEA"
 ---
 
 # Apuntes C

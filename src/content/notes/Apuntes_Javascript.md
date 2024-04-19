@@ -2,7 +2,7 @@
 title: "Eloquent JavaScript"
 author: "Marijin Haverbeke"
 color: ["#F8D410", "#F8D410"]
-text_color: "black"
+textColor: "black"
 ---
 
 # Apuntes Javascript

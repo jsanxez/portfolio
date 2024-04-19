@@ -2,7 +2,7 @@
 title: "MongoDB in Action"
 author: "Kyle Banker and Peter Bakkum"
 color: ["#2D494A", "#2D494A"]
-text_color: "white"
+textColor: "white"
 ---
 
 # MongoDB
