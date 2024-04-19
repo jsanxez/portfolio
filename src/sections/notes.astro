@@ -1,6 +1,7 @@
 ---
+import { getCollection } from "astro:content";
 import NoteCard from "../components/NoteCard.astro"
-const notes = await Astro.glob("../content/notes/*.md")
+const notes = await getCollection('notes');
 ---
 
 <section id="notes" class="max-w-5xl mx-auto py-8 px-4">
@@ -11,7 +12,7 @@ const notes = await Astro.glob("../content/notes/*.md")
 
     <div class="flex flex-wrap justify-center gap-8 mx-auto mt-8">
         {notes.map(note => (
-            <NoteCard note={note.frontmatter} />
+            <NoteCard note={note.data} />
         ))}
     </div>
 </section>
