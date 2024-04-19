@@ -1,13 +1,21 @@
 ---
 import quillIcon from "../components/icons/quill-pen.svg?raw"
+const { note } = Astro.props;
 ---
 
-<div class="w-[210px] h-[297px] bg-yellow-500 p-4 text-center rounded-2xl flex flex-col gap-4 justify-between">
-    <div class="w-fit mx-auto">
-        <Fragment set:html={quillIcon} />
-    </div>
-    <div>
-        <h3 class="text-lg font-bold">ELOQUENT JAVASCRIPT</h3>
-        <p class="text-sm mt-4">Marijin Heverbeke</p>
+<div class={`w-[210px] h-[297px] p-4 rounded-2xl flex flex-col gap-4 justify-between`} style=`background-image: linear-gradient(${note.color[1]}, ${note.color[0]})`>
+    <Fragment set:html={quillIcon} />
+    <div style=`color:${note.text_color}`>
+        <h3 class="text-lg font-bold text-center">{note.title}</h3>
+        <p class="text-sm mt-4 text-center">{note.author}</p>
     </div>
 </div>
+
+<style define:vars={{color: note.text_color}}>
+    div {
+        svg {
+            fill: var(--color);
+            opacity: .7;
+        }
+    }
+</style>
