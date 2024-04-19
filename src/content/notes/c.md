@@ -1,8 +1,8 @@
 ---
-title: "PHP Language Reference"
-author: "PHP Docs"
-color: ["#7B86B8", "#7B86B8"]
-textColor: "#EAEAEA"
+title: "The C Programming Language"
+author: "Brian Kernighan and Dennis Ritchie"
+color: ["#D5BCA1", "#D5BCA1"]
+textColor: "#3E4270"
 ---
 
 # Apuntes C

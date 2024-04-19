@@ -1,0 +1,16 @@
+---
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+    const notes = await getCollection('notes');
+
+    return notes.map(note => (
+        {params: {slug: note.slug}, props: {note}}
+    ))
+}
+
+const { note } = Astro.props;
+const { Content } = await note.render();
+---
+
+<Content />
