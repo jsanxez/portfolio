@@ -7,12 +7,10 @@ nisi risus, a volutpat arcu pellentesque id. Mauris odio ante."
 status: "99% completed"
 
 image:
-  - path: "/fragmental-home.png"
-    alt: "Página inicio del proyecto"
-  - path: "/fragmental-blog.png"
-    alt: "Página blog del proyecto"
-  - path: "/revnio.png"
-    alt: "Página blog del proyecto"
+  - path: "/src/content/projects/attachments/fragmental/fragmental.webp"
+    alt: "Fragmental's home page"
+  - path: "/src/content/projects/attachments/fragmental/fragmental-blog.webp"
+    alt: "Fragmental's blog page"
 
 links:
   code: "https://github.com/jsanxez/fragmental2.0"

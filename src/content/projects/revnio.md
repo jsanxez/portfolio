@@ -7,6 +7,8 @@ nisi risus, a volutpat arcu pellentesque id. Mauris odio ante."
 status: "64% completed"
 
 image: 
-  - path: "/revnio.png"
-    alt: "The full Astro logo."
+  - path: "/src/content/projects/attachments/revnio/revnio-dashboard.webp"
+    alt: "Revnio's dashboard page"
+  - path: "/src/content/projects/attachments/revnio/revnio-full.webp"
+    alt: "Revnio's Figma UI"
 ---

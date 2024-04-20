@@ -5,10 +5,10 @@ Pellentesque sed elit elit. Nunc tincidunt at purus nec rutrum. Duis bibendum
 nisi risus, a volutpat arcu pellentesque id. Mauris odio ante."
 
 image:
-  - path: "/map.png"
-    alt: "Shows in real time the position of the bus"
-  - path: '/login.png'
-    alt: "Login with credentials to get in the app"
+  - path: "/src/content/projects/attachments/bus-tracker/map.webp"
+    alt: "Showing the position of the tracked object"
+  - path: "/src/content/projects/attachments/bus-tracker/login.webp"
+    alt: "Login view of the bus tracker app"
 
 links:
   code: "https://github.com/jsanxez/bus_tracker_project"
