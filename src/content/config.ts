@@ -12,12 +12,12 @@ const notesCollection = defineCollection({
 
 const projectsCollection = defineCollection({
     type: 'content',
-    schema: z.object({
+    schema: ({ image }) => z.object({
       title: z.string(),
       description: z.string(),
       status: z.string().optional(),
       image: z.array(z.object({
-        path: z.string(),
+        path: image(),
         alt: z.string()
       })),
       links: z.object({
