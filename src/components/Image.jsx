@@ -58,7 +58,7 @@ function Slider ({ imageSet, onClose }) {
 
   return (
     <>
-      <div onClick={() => { onClose() }} className='fixed inset-0 flex justify-center items-center bg-black/60 backdrop-blur-xl'>
+      <div onClick={() => { onClose() }} className='fixed inset-0 flex justify-center items-center bg-black/60 backdrop-blur-xl z-10'>
         <div className='flex items-center  justify-center gap-4 mx-4 w-[1000px] h-[90vh]'>
           <button onClick={handlePrevious} className='absolute sm:static left-[6%] shrink-0 inline-flex justify-center items-center rounded-full bg-white w-10 h-10'>
             <svg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 -960 960 960' width='24'><path d='M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z' /></svg>
