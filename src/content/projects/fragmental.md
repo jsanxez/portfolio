@@ -7,9 +7,9 @@ nisi risus, a volutpat arcu pellentesque id. Mauris odio ante."
 status: "99% completed"
 
 image:
-  - path: "/src/content/projects/attachments/fragmental/fragmental.webp"
+  - path: "../../assets/projects/fragmental/fragmental.webp"
     alt: "Fragmental's home page"
-  - path: "/src/content/projects/attachments/fragmental/fragmental-blog.webp"
+  - path: "../../assets/projects/fragmental/fragmental-blog.webp"
     alt: "Fragmental's blog page"
 
 links:

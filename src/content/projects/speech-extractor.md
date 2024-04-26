@@ -6,7 +6,7 @@ proposito de generar actas de reunion. Hace uso de la libreria grafica Tkinter
 para la interfaz de usuario y SpeechRecognition para consumir API’s."
 
 image:
-  - path: "/src/content/projects/attachments/speech-extractor/gui.webp"
+  - path: "../../assets/projects/speech-extractor/gui.webp"
     alt: "The full Astro logo."
 
 links:

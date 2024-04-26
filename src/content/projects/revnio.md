@@ -7,8 +7,8 @@ nisi risus, a volutpat arcu pellentesque id. Mauris odio ante."
 status: "64% completed"
 
 image: 
-  - path: "/src/content/projects/attachments/revnio/revnio-dashboard.webp"
+  - path: "../../assets/projects/revnio/revnio-dashboard.webp"
     alt: "Revnio's dashboard page"
-  - path: "/src/content/projects/attachments/revnio/revnio-full.webp"
+  - path: "../../assets/projects/revnio/revnio-full.webp"
     alt: "Revnio's Figma UI"
 ---
