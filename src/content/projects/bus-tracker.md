@@ -8,6 +8,8 @@ index: 3
 image:
   - path: "../../assets/projects/bus-tracker/map.webp"
     alt: "Showing the position of the tracked object"
+  - path: "../../assets/projects/bus-tracker/routes.webp"
+    alt: "You need to choose the route before tracking"
   - path: "../../assets/projects/bus-tracker/login.webp"
     alt: "Login view of the bus tracker app"
 
