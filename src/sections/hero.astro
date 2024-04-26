@@ -1,12 +1,12 @@
 ---
 import Button from '../components/Button.astro';
 import Indicator from '../components/Indicator.astro';
-import Forest from '../components/icons/forest.astro';
+import forest from '../icons/forest.svg?raw';
 ---
 
 <div class="mb-8 p-8 h[820px]">
     <div class="relative w-fit mx-auto">
-        <Forest />
+        <Fragment set:html={forest} />
         <Indicator text="Projects" link="#projects" orientation="to-left" />
         <Indicator text="Skills" link="#skills" orientation="to-left" />
         <Indicator text="Notes" link="#notes" orientation="to-right" />
