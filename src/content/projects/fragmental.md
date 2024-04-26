@@ -1,8 +1,7 @@
 ---
 title: "Fragmental"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Pellentesque sed elit elit. Nunc tincidunt at purus nec rutrum. Duis bibendum
-nisi risus, a volutpat arcu pellentesque id. Mauris odio ante."
+description: "Plantilla minimalista y limpia para la creación de contenido en
+sitios web personales."
 date: 2020-01-27
 index: 5
 

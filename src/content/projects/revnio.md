@@ -1,8 +1,7 @@
 ---
 title: "Revnio"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Pellentesque sed elit elit. Nunc tincidunt at purus nec rutrum. Duis bibendum
-nisi risus, a volutpat arcu pellentesque id. Mauris odio ante."
+description: "Software as a Service (SaaS) para la gestión de talento creativo y
+humano en áreas relacionados con las Tecnologías de la Información."
 date: 2023-10-01
 index: 1
 
