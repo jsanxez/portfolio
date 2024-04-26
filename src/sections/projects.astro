@@ -2,12 +2,14 @@
 import { getCollection } from "astro:content";
 import ProjectItem from "../components/ProjectItem.astro";
 const projects = await getCollection('projects');
+console.log(projects[0])
+const sortedProjects = projects.sort((a, b) => a.data.index - b.data.index)
 ---
 
 <section id="projects" class="max-w-5xl mx-auto py-8 px-4">
     <h2 class="text-center text-3xl mb-16">Projects</h2>
     <div class="flex flex-col gap-8">
-        {projects.map(project => (
+        {sortedProjects.map(project => (
             <ProjectItem project={project.data} />
         ))}
     </div>

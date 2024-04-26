@@ -3,8 +3,8 @@ title: "Fragmental"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Pellentesque sed elit elit. Nunc tincidunt at purus nec rutrum. Duis bibendum
 nisi risus, a volutpat arcu pellentesque id. Mauris odio ante."
-
-status: "99% completed"
+date: 2020-01-27
+index: 5
 
 image:
   - path: "../../assets/projects/fragmental/fragmental.webp"

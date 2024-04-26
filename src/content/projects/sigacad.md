@@ -4,6 +4,8 @@ description: "Sistema académico para la gestión de estudiantes y docentes.
 Soporte para el control de matrícula de estudiantes, cursos vinculados,
 asistencias, y notas. El sistema utiliza vanilla PHP, JavaScript y el modelo MVC
 en la estructura."
+date: 2018-12-01
+index: 2
 
 image:
   - path: "../../assets/projects/sigacad/login.webp"

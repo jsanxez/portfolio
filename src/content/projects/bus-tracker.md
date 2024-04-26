@@ -2,6 +2,8 @@
 title: "Bus Tracker"
 description: "Aplicativo móvil para geolocalizar vehículos en tiempo real
 desarrollado en Android, Java, Firebase y Google Maps."
+date: 2019-08-01
+index: 3
 
 image:
   - path: "../../assets/projects/bus-tracker/map.webp"
