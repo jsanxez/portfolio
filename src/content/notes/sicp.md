@@ -3,6 +3,7 @@ title: "Structure and Interpretacion of Computer Programs"
 author: "Harold Habelson, Gerald Jay Sussman"
 color: ["#190161", "#190161"]
 textColor: "white"
+featured: true
 ---
 
 # Structured and Interpretation of Computer Programs

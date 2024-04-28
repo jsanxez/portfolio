@@ -7,6 +7,7 @@ const notesCollection = defineCollection({
       author: z.string(),
       color: z.array(z.string()),
       textColor: z.string(),
+      featured: z.boolean().optional()
     })
 });
 

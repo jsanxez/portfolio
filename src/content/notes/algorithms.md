@@ -3,6 +3,7 @@ title: "Introduction to Algorithms"
 author: "Thomas Cormen"
 color: ["#1F9FC2", "white"]
 textColor: "#79020F"
+featured: true
 ---
 
 # Introduction to Algoritms
