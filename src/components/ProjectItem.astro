@@ -15,9 +15,9 @@ const { project } = Astro.props;
         </header>
         <p class="pb-6">{project.description}</p>
         <div class="flex gap-4 flex-wrap">
-            <Button type="outlined">
+            <!-- <Button type="outlined">
                 Read more
-            </Button>
+            </Button> -->
             <div class={`${!project?.links && 'hidden'} grow flex gap-4 flex-wrap justify-end`} >
                 {project?.links?.site &&
                 <a href={project.links.site} target="_blank" class="inline-flex items-center gap-2 px-3 text-sm h-10">

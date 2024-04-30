@@ -1,19 +1,24 @@
 ---
 import { getCollection } from "astro:content";
 import NoteCard from "../components/NoteCard.astro"
+import Button from "../components/Button.astro"
 const notes = await getCollection('notes');
 const featuredNotes = notes.filter(note => note.data.featured === true)
 ---
 
 <section id="notes" class="max-w-5xl mx-auto py-8 px-4">
-    <h2 class="text-center text-3xl mb-4">Notes</h2>
+    <h2 class="relative w-fit mx-auto text-center text-3xl mb-4">Notas <span class="absolute bottom-6 left-24 text-xs px-1 bg-green-400 text-white rounded-lg whitespace-nowrap">en progreso...</span></h2>
     <p class="mb-8 text-center">
-        This is a collection of all the books I've been reading throughout my professional development.
+        Algunas notas de los libros que he estado leyendo.
     </p>
 
     <div class="flex flex-wrap justify-center gap-8 mx-auto mt-8">
         {featuredNotes.map(note => (
             <NoteCard note={note.data} url={`/notes/${note.slug}`} />
         ))}
+    </div>
+
+    <div class="text-center mt-8">
+        <Button type="outlined">Mostrar todo</Button>
     </div>
 </section>

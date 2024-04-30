@@ -3,6 +3,7 @@ title: "The C Programming Language"
 author: "Brian Kernighan and Dennis Ritchie"
 color: ["#D5BCA1", "#D5BCA1"]
 textColor: "#3E4270"
+featured: true
 ---
 
 # Apuntes C
