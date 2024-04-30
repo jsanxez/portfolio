@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import ProjectItem from "../components/ProjectItem.astro";
 const projects = await getCollection('projects');
-console.log(projects[0])
 const sortedProjects = projects.sort((a, b) => a.data.index - b.data.index)
 ---
 
