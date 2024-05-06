@@ -6,7 +6,9 @@ import forest from '../icons/forest.svg?raw';
 
 <div class="mb-8 p-8 h[820px]">
     <div class="relative w-fit mx-auto">
-        <Fragment set:html={forest} />
+        <div class="svg-container">
+            <Fragment set:html={forest} />
+        </div>
         <Indicator text="Proyectos" link="#projects" orientation="to-left" />
         <Indicator text="Skills" link="#skills" orientation="to-left" />
         <Indicator text="Notas" link="#notes" orientation="to-right" />
@@ -26,3 +28,11 @@ import forest from '../icons/forest.svg?raw';
         </Button>
     </div>
 </div>
+
+<style>
+   .svg-container {
+        svg {
+            width: 100%;
+        }
+   }
+</style>
