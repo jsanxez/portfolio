@@ -3,7 +3,7 @@ title: "Fragmental"
 description: "Plantilla minimalista y limpia para la creación de contenido en
 sitios web personales."
 date: 2020-01-27
-index: 5
+index: 6
 
 image:
   - path: "../../assets/projects/fragmental/fragmental.webp"
