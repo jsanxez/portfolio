@@ -8,6 +8,8 @@ date: 2024-05-02
 index: 1
 
 image:
+  - path: "../../assets/projects/attendance/login.webp"
+    alt: "Login"
   - path: "../../assets/projects/attendance/list-view.webp"
     alt: "List view"
   - path: "../../assets/projects/attendance/grid-view.webp"
