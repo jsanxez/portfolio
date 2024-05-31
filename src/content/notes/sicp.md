@@ -1,5 +1,5 @@
 ---
-title: "Structure and Interpretacion of Computer Programs"
+title: "Structure and Interpretation of Computer Programs"
 author: "Harold Habelson, Gerald Jay Sussman"
 color: ["#190161", "#190161"]
 textColor: "white"
