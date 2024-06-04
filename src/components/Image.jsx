@@ -9,7 +9,7 @@ export default function Image ({ imageSet }) {
   return (
     <>
       <div>
-        <img src={imageSet[0].path.src} alt={imageSet[0].alt} onClick={handleClick} className='md:w-80 rounded-2xl aspect-video object-cover cursor-pointer border border-purple-700' />
+        <img src={imageSet[0].path.src} alt={imageSet[0].alt} onClick={handleClick} className='md:w-80 rounded-2xl aspect-video object-cover cursor-pointer border border-purple-700' loading='lazy' />
         {imageSet.length > 1 && <div class='w-1 h-1 rounded-full bg-purple-700 mx-auto mt-2' />}
         {showModal && <Slider imageSet={imageSet} onClose={handleSlider} />}
       </div>
@@ -85,7 +85,7 @@ function Slide ({ path, altText, isVisible }) {
   return (
     <div className={`${!isVisible && 'hidden'} max-h-[calc(100%-40px)]`}>
       <div className='h-[calc(100%-40px)]'>
-        <img src={path.src} alt={altText} onClick={handleClick} className='h-full mx-auto object-contain' />
+        <img src={path.src} alt={altText} onClick={handleClick} className='h-full mx-auto object-contain' loading='lazy' />
       </div>
       <p className='text-white text-center mt-4'>{altText}</p>
     </div>
