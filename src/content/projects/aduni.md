@@ -1,7 +1,7 @@
 ---
 title: "Gestión de asistencia"
 description: "Módulo para la gestión de asistencia en instituciones educativas.
-Tiene soporte para lectura automática de carnet de estudiante. Desarrollado con
+Tiene soporte para el marcado de asistencia mediante carnet. Desarrollado con
 MongoDb, PostgreSQL, Express, React, Next.js y Node"
 
 date: 2024-05-02
