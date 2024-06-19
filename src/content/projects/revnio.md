@@ -1,7 +1,7 @@
 ---
 title: "Revnio"
 description: "Software as a Service (SaaS) para la gestión de talento creativo
-desde la fase de reclutamiento hasta la integración en la empresa."
+desde la fase de reclutamiento hasta su integración dentro de la empresa."
 date: 2023-10-01
 index: 3
 
