@@ -92,7 +92,7 @@ sistema subyacente y dispositivos como el mouse o el teclado.
 > - A la colección de bindings y sus valores que existen en un tiempo dado, se
 >   le conoce como *environment* (entorno).
 > - Funciones como `setTimeout`, `DOM` o HTTP requests no forman parte del
->   runtime de JavaScrip, sino que son *web apis* que provee el navegador.
+>   runtime de JavaScript, sino que son *web apis* que provee el navegador.
 
 -------------------------------------------------------------------------------
 
@@ -389,7 +389,7 @@ console.log(data);                                  // 30
 
 Desempacar valores de retorno de funciones (destructuring):
 
-```
+```js
 function f() {
     return [10, 20];
 }
@@ -678,7 +678,7 @@ function phi([n00, n01, n10, n11]) {
 
 #### 2.1 Closure
 
-Oh!, malditos closures!
+Oh, malditos closures!
 
 ```js
 function multiplier(factor) {

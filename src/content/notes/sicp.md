@@ -71,12 +71,13 @@ expresiones que representan un procedimiento primitivo (`+` o `*`) para formar
 expresiones que representan el resultado de la aplicación de tales
 procedimientos:
 
-```
+```scheme
 (+ 153 147)
 (- 512 100)
 (* 5 99)
 (/ 5 2)
-
+```
+```
 → 300
 → 412
 → 495
@@ -91,7 +92,7 @@ procedimientos:
 La notación prefija tiene muchas ventajas, desde las claridad hasta el
 anidamiento convencional:
 
-```
+```scheme
 (+ 32 51 93 9)
 (+ (* 3 (+ (* 2 4) (+ 3 5))) (+ (- 10 7) 6))
 
@@ -100,7 +101,8 @@ anidamiento convencional:
          (+ 3 5)))
    (+ (- 10 7)
        6))
-
+```
+```
 → 185
 → 57
 → 57
@@ -117,12 +119,14 @@ anidamiento convencional:
 En Scheme las variables (nombre que referencia a un objeto computacional) se
 definen mediante `define`.
 
-```
+```scheme
 (define pi 3.14159)
 (define radius 10)
 (define circumference (* 2 pi radius))
-circumference
 
+circumference
+```
+```
 → 62.8318
 ```
 
@@ -150,7 +154,7 @@ etapa de evaluación, es decir, la evaluación es de naturaleza *recursiva*.
 Por ejemplo, si se quisiera evaluar la siguiente combinación, este requeriría
 que la regla de evaluación sea aplicada a las cuatro diferentes combinaciones.
 
-```
+```scheme
 (* (+ 2 (* 4 6)) (+ 3 5 7))
 ```
 
@@ -205,7 +209,7 @@ A continuación se tratará sobre una técnica de abstracción que permite nombr
 una operación compuesta y referenciarlo como una unidad, denominado *compound
 procedure*:
 
-```
+```scheme
 (define (<name> <formal parameters>) <body>)
 ```
 
@@ -218,7 +222,7 @@ procedure*:
 
 Creando un *compound procedure* que permite elevar un número *x* al cuadrado:
 
-```
+```scheme
 (define (square x) (* x x))
 (define (sum-of-squares x y) (+ (square x) (square y)))
 (define (f a) (sum-of-squares(+ a 1) (* a 2)))
@@ -238,14 +242,15 @@ El *modelo de sustitución* para la aplicación de procedimientos que se describ
 a continuación ayuda a pensar sobre la aplicación del procedimiento, mas no es
 una descripción de como funciona el intérprete.
 
-```
+```scheme
 (f 5)
 (sum-of-squares (+ a 1) (* a 2))
 (sum-of-squares (+ 5 1) (* 5 2))
 (+ (square 6) (square 10))
 (+ (* 6 6) (* 10 10))
 (+ 36 100)
-
+```
+```
 → 136
 ```
 
@@ -265,7 +270,7 @@ evaluación.
 Método de evaluación *normal-order evaluation* o "expandir todo y luego
 reducir":
 
-```
+```scheme
 (f 5)
 (sum-of-squares (+ 5 1) (* 5 2))
 (+ (square (+ 5 1)) (square (* 5 2)))
@@ -273,7 +278,8 @@ reducir":
 
 (+ (* 6 6) (* 10 10))
 (+ 36 100)
-
+```
+```
 → 136 
 ```
 
@@ -291,22 +297,23 @@ reducir":
 Uso de *case analysis* para calcular el valor absoluto de un número:
 
 ```
-      .-
-      | r   if r>0
-|r| = | 0   if r=0
-      | -r  if r<0
-      .-
+      ┌
+      |  r   if r > 0
+|r| = |  0   if r = 0
+      | -r   if r < 0
+      └
+
 ```
 
 Para representar un análisis de caso se utiliza *cond* de "condicional":
 
-```
+```scheme
 (define (abs x)
   (cond ((> x 0) x)
         ((= x 0) 0)
         ((< x 0) (- x))))
 ```
-```
+```scheme
 (define (abs x)
  (cond ((< x 0) (- x))
        (else x)))
@@ -322,7 +329,7 @@ Para representar un análisis de caso se utiliza *cond* de "condicional":
 
 Condicional restringido solo a dos casos de análisis:
 
-```
+```scheme
 (define (abs x)
     (if (< x 0)
           (- X)
@@ -336,7 +343,7 @@ Condicional restringido solo a dos casos de análisis:
 Además de predicados primitivos como `>`, `<`, `>=` o `<=` hay operaciones de
 composición lógica que permiten realizar predicados compuestos:
 
-```
+```scheme
 (and <e1> ... <en>)
 (or  <e1> ... <en>)
 (not <e1>)
@@ -349,7 +356,7 @@ composición lógica que permiten realizar predicados compuestos:
 
 Ejemplos:
 
-```
+```scheme
 (define (>= x y)
     (and (> x y) (= x y)))
 
@@ -361,7 +368,7 @@ Ejemplos:
 
 Ejemplo de la grandiosa flexibilidad de Scheme:
 
-```
+```scheme
 (define (a-plus-abs-b a b)
         ((if (> b 0) + -) a b))
 ```
