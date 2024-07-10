@@ -382,10 +382,10 @@ void copy(char to[], char from[]) {
 
 Al igual que con EOF en los archivos, se utiliza `\0` para indicar el final de
 la cadena de caracteres; tambien llamado *null character* cuyo valor es cero.
-    
-    .---------------------------------.
+
+    ┌---------------------------------┐
     |  h  |  o  |  l  |  a  | \n | \0 |
-    `---------------------------------´
+    └---------------------------------┘
 
 > - El formato `%s` de `printf` espera que el argumento sea de este modo. La
 >   impresión con `printf` será detenida se encuentre `\0` en la cadena.
