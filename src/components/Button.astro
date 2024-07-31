@@ -6,7 +6,7 @@ const { type, iconPosition } = Astro.props;
     <slot />
 </button>
 
-<style>
+<style is:global>
     .leading { padding-left: 1rem; }
     .trailing { padding-right: 1rem; }
     .filled {
