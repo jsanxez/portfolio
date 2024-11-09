@@ -1,8 +1,7 @@
 ---
 title: "Gestión de asistencia"
-description: "Módulo para la gestión de asistencia en instituciones educativas.
-Tiene soporte para el marcado de asistencia mediante carnet. Desarrollado con
-MongoDb, PostgreSQL, Express, React, Next.js y Node.js"
+description: "Módulo para la gestión de asistencia en instituciones educativas
+mediante lectura de QR. Desarrollado con PostgreSQL, React, Next.js y Node.js"
 
 date: 2024-05-02
 index: 1
