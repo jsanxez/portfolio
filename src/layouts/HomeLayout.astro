@@ -1,9 +1,10 @@
 ---
 import "@fontsource/quicksand";
 import "@fontsource/josefin-sans";
+const { title, description } = Astro.props
 ---
 
-<html lang="en" class="scroll-smooth">
+<html lang="es" class="scroll-smooth">
     <head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJ9JZ4QK8J"></script>
@@ -17,8 +18,8 @@ import "@fontsource/josefin-sans";
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
-        <meta name="description" content="Continuamente priorizo escribir buen código, diseñar interfaces limpias y con experiencias de usuario agradables; a veces me anticipo a las futuras necesidades y allano el camino... solo a veces.">
-        <title>Jose Sanchez | Software Developer</title>
+        <meta name="description" content={description}>
+        <title>{ title }</title>
     </head>
     <body>
         <slot />

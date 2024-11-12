@@ -4,9 +4,11 @@ import Hero from "../sections/hero.astro";
 import Projects from "../sections/projects.astro";
 import Skills from "../sections/skills.astro";
 import Notes from "../sections/notes.astro";
+
+const description = "Continuamente priorizo escribir buen código, diseñar interfaces limpias y con experiencias de usuario agradables; a veces me anticipo a las futuras necesidades y allano el camino... solo a veces."
 ---
 
-<HomeLayout>
+<HomeLayout title="José Sánchez | Software Developer" description={description}>
     <Hero />
     <Projects />
     <Skills />

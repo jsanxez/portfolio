@@ -1,20 +1,33 @@
 ---
 import NoteLayout from "../../layouts/NoteLayout.astro"
-import { getCollection } from "astro:content";
+import { getCollection } from "astro:content"
 
 export async function getStaticPaths() {
-    const notes = await getCollection('notes');
+    const notes = await getCollection('notes')
 
     return notes.map(note => (
         {params: {slug: note.slug}, props: {note}}
     ))
 }
 
-const { note } = Astro.props;
-const { Content } = await note.render();
+function generateDescription(content: string, frontmatter: any) {
+    const headings = content
+        .split('\n')
+        .filter(line => line.startsWith('## ') || line.startsWith('### ') || line.startsWith('#### '))
+        .map(line => line.replace(/^#{2,4}\s/, ''))
+        .slice(0, 17)
+
+    const description = `Apuntes de ${frontmatter.title} (${frontmatter.author}): ${headings.join(', ')}.`
+
+    return description.length > 160 ? description.substring(0, 157) + '...' : description
+}
+
+const { note } = Astro.props
+const { Content } = await note.render()
+const description = generateDescription(note.body, note.data)
 ---
 
-<NoteLayout>
+<NoteLayout title={note.data.title} description={description}>
     <article class="content-wrapper">
         <Content />
     </article>
@@ -22,7 +35,6 @@ const { Content } = await note.render();
 
 <style>
     .content-wrapper {
-        /* border: 1px solid red; */
         max-width: 832px;
         padding: 1em;
         margin: auto;
