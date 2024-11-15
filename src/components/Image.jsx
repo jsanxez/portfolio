@@ -8,9 +8,8 @@ export default function Image ({ imageSet }) {
 
   return (
     <>
-      <div>
-        <img src={imageSet[0].path.src} alt={imageSet[0].alt} onClick={handleClick} className='md:w-80 rounded-2xl aspect-video object-cover cursor-pointer border border-purple-700' loading='lazy' decoding='async' />
-        {imageSet.length > 1 && <div class='w-1 h-1 rounded-full bg-purple-700 mx-auto mt-2' />}
+      <div class='md:w-80 overflow-hidden rounded-xl aspect-video cursor-pointer border border-purple-300'>
+        <img src={imageSet[0].path.src} alt={imageSet[0].alt} onClick={handleClick} className='aspect-video object-cover transition-transform hover:scale-105' loading='lazy' decoding='async' />
         {showModal && <Slider imageSet={imageSet} onClose={handleSlider} />}
       </div>
     </>
