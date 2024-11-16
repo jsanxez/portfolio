@@ -1,0 +1,7 @@
+---
+const { href, appearance='', iconPosition='' } = Astro.props;
+---
+
+<a href={href} target="_blank" class=`${appearance} ${iconPosition} inline-flex items-center gap-2 rounded-full text-sm h-10`>
+    <slot />
+</a>
