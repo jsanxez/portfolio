@@ -1,9 +1,9 @@
 ---
-title: "Demo: Speech Extractor"
-description: "Aplicativo de escritorio con reconocimiento de voz y
-funcionalidad de transcripción en documentos con formato pdf. Realizado con el
-propósito de generar actas de reunión. Hace uso de la librería gráfica Tkinter
-para la interfaz de usuario y SpeechRecognition para consumir API’s."
+title: "Transcriptor de audio - demo"
+description: "Aplicativo de escritorio con reconocimiento de voz y funcionalidad
+de transcripción de audio con salida en formato doc y pdf. Realizado con el
+propósito de generar actas de reunión. Implementando en Python con librerías
+Tkinter y SpeechRecognition."
 date: 2020-09-14
 index: 5
 

@@ -1,19 +1,20 @@
 ---
-title: "Sigacad"
-description: "Sistema académico para la gestión de estudiantes y docentes.
-Soporte para el control de matrícula de estudiantes, cursos vinculados,
-asistencias, y notas. El sistema utiliza vanilla PHP, JavaScript y el modelo MVC
-en la estructura."
+title: "Sistema académico integral - Sigacad"
+description: "Sistema académico integral para instituciones educativas de
+educación superior. Cuenta con módulos para la gestión de matrículas,
+estudiantes, docentes, cursos, calificaciones y más. El sistema utiliza vanilla
+PHP, JavaScript y MVC como patrón de diseño."
+
 date: 2018-12-01
 index: 2
 
 image:
+  - path: "../../assets/projects/sigacad/components.webp"
+    alt: "Academic Sigacad platform"
+  - path: "../../assets/projects/sigacad/courses.webp"
+    alt: "courses management module"
   - path: "../../assets/projects/sigacad/login.webp"
-    alt: "Login page"
-  - path: "../../assets/projects/sigacad/cursos.webp"
-    alt: "List all the available courses"
-  - path: "../../assets/projects/sigacad/curso-docente.webp"
-    alt: "You can assign a course to one or more instructors"
+    alt: "Authentication page"
 
 links:
   code: "https://github.com/jsanxez/sigacad"
