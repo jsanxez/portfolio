@@ -2,7 +2,7 @@
 import Image from "./Image"
 // import Button from "./Button.astro"
 import codeIcon from "../icons/code.svg?raw"
-import linkIcon from "../icons/link.svg?raw"
+import openNew from "../icons/open_new.svg?raw"
 import Link from "./Link.astro"
 const { project } = Astro.props
 ---
@@ -22,8 +22,8 @@ const { project } = Astro.props
             <div class={`${!project?.links && 'hidden'} grow flex gap-4 flex-wrap justify-end`} >
                 {project?.links?.site &&
                 <Link href={project.links.site} appearance="text" iconPosition="leading">
-                    <Fragment set:html={linkIcon} />
-                    Ver proyecto
+                    <Fragment set:html={openNew} />
+                    Sitio web
                 </Link>
                 }
                 {project?.links?.code &&

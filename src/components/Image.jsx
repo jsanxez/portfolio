@@ -84,7 +84,7 @@ function Slide ({ path, altText, isVisible }) {
   return (
     <div className={`${!isVisible && 'hidden'} max-h-[calc(100%-40px)]`}>
       <div className='h-[calc(100%-40px)]'>
-        <img src={path.src} alt={altText} onClick={handleClick} className='h-full mx-auto object-contain' loading='lazy' decoding='async' />
+        <img src={path.src} alt={altText} onClick={handleClick} className='h-full mx-auto object-contain rounded-xl' loading='lazy' decoding='async' />
       </div>
       <p className='text-white text-center mt-4'>{altText}</p>
     </div>
