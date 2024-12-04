@@ -9,8 +9,6 @@ Tailwind."
 date: 2024-05-02
 index: 0
 
-status: WIP
-
 image:
   - path: "../../assets/projects/ciclero-guru/components.webp"
     alt: "Ciclero Gurú landing page"
