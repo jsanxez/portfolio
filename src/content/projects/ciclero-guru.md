@@ -10,10 +10,10 @@ date: 2024-05-02
 index: 0
 
 image:
-  - path: "../../assets/projects/ciclero-guru/components.webp"
-    alt: "Ciclero Gurú landing page"
   - path: "../../assets/projects/ciclero-guru/simulator.webp"
     alt: "Mock admission exam generator"
+  - path: "../../assets/projects/ciclero-guru/components.webp"
+    alt: "Ciclero Gurú landing page"
   - path: "../../assets/projects/ciclero-guru/stats-components.webp"
     alt: "Components of admission exam statistics page"
   - path: "../../assets/projects/ciclero-guru/stats.webp"
