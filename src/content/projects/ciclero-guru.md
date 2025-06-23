@@ -2,9 +2,8 @@
 title: "Más que un simulacro de examen - Ciclero Gurú"
 description: "Sistema de generación de exámenes de admisión por universidad,
 carrera y área. Aleatoriza y distribuye las preguntas de acuerdo al
-prospecto/temario más reciente y genera un análisis de datos estadísticos de
-exámenes recientes mediante IA. Implementado en JavaScript, React, Next.js, PostgreSQL y
-Tailwind."
+prospecto/temario más reciente y genera análisis de datos estadísticos de
+exámenes recientes mediante inteligencia artificial. Actualmente en desarrollo."
 
 date: 2024-05-02
 index: 0
