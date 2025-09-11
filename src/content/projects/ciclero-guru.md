@@ -1,9 +1,6 @@
 ---
 title: "Más que un simulacro de examen - Ciclero Gurú"
-description: "Sistema de generación de exámenes de admisión por universidad,
-carrera y área. Aleatoriza y distribuye las preguntas de acuerdo al
-prospecto/temario más reciente y genera análisis de datos estadísticos de
-exámenes recientes mediante inteligencia artificial. Actualmente en desarrollo."
+description: "plataforma web para estudiantes preuniversitarios que fortalece su aprendizaje en su proceso de admisión a la universidad. Actualmente tiene +20 mil usuarios al mes y +2 mil usuarios registrados en 15 días 😊"
 
 date: 2024-05-02
 index: 0
